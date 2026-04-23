@@ -141,8 +141,6 @@ compliance platform detects it *before* submission.
 This module is the first open-source detection engine purpose-built for
 CMMC Level 2 evidence packets.
 
-It is Hardseal's wedge into the trust layer of AI-era defense compliance.
-
 ---
 
 ## What it does
@@ -329,8 +327,6 @@ excluded from the whitelist.
 | Field Report: *State of AI-Era Defense Compliance Evidence* (Paper) | TARGET April 27, 2026 |
 | v0.4 shipping the five remaining detectors published in the paper | TARGET end of May 2026 |
 | Conference Demo: *AI-Era Attacks on CMMC Evidence* (Stage) | TARGET Q1 2027 |
-
-Code, Paper, Stage. Own the trust layer of AI-era defense compliance.
 
 ---
 
