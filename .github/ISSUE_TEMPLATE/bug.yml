@@ -1,0 +1,56 @@
+name: Bug report
+description: A defect in the detector, the verifier, or the CLI
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Read `SUPPORT.md` and `CONTRIBUTING.md`
+        before submitting. Bug reports with a minimal reproduction close
+        faster than reports without one.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Tag like v0.2.0 or a commit SHA.
+      placeholder: v0.2.0
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.3"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+      description: Paste the exact shell command. Redact any local paths.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected to happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      description: Paste the error output. Redact any CUI or sensitive data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: stdlib
+    attributes:
+      label: Confirm
+      options:
+        - label: I have read `SUPPORT.md` and `CONTRIBUTING.md`.
+          required: true
+        - label: My report contains no CUI, no export-controlled content, and no production secrets.
+          required: true

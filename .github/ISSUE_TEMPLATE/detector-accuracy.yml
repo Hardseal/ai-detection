@@ -1,0 +1,60 @@
+name: Detector accuracy (false positive or false negative)
+description: The detector fired on a legitimate artifact, or failed to fire on a synthetic artifact.
+title: "[accuracy] "
+labels: ["accuracy", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accuracy reports are how the project improves. Please be specific.
+        Redact before submitting. No CUI, no export-controlled content,
+        no production secrets.
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Type of miss
+      options:
+        - False positive (legitimate packet scored CONTAMINATED or worse)
+        - False negative (synthetic packet scored CLEAN)
+    validations:
+      required: true
+  - type: input
+    id: verdict
+    attributes:
+      label: Verdict the detector returned
+      placeholder: "CONTAMINATED @ 0.518"
+    validations:
+      required: true
+  - type: textarea
+    id: features
+    attributes:
+      label: Per-detector feature values
+      description: Paste the per-detector breakdown from the CLI output.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Redacted artifact characteristics
+      description: |
+        Describe the artifact without sharing CUI. Useful detail:
+        number of controls, approximate word count, source (in-house SSP,
+        consultant template, MSP export, etc.), known provenance.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected verdict and reasoning
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      options:
+        - label: My report contains no CUI, no export-controlled content, and no production secrets.
+          required: true
+        - label: I have read `REGULATORY_DISCLAIMER.md` and understand the detector is a heuristic signal, not a compliance judgement.
+          required: true

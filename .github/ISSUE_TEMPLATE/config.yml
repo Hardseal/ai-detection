@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: DIB contractor or C3PAO readiness inquiry
+    url: mailto:rico@hardseal.ai?subject=%5BDIB%5D%20or%20%5BC3PAO%5D%20readiness%20inquiry
+    about: If you are a DIB contractor, an MSP serving DIB, or a C3PAO, email direct. GitHub issues are not the right channel.
+  - name: Paid Readiness Pack or AI-detection overlay
+    url: mailto:rico@hardseal.ai?subject=%5BPAID%5D
+    about: Commercial inquiries go to email with a 24-hour acknowledgement target.
+  - name: Security vulnerability
+    url: https://github.com/hardseal/ai-detection/security/policy
+    about: Security reports follow a coordinated-disclosure policy. Do not open a public issue.
